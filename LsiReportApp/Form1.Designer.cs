@@ -31,6 +31,7 @@ namespace LsiReportApp
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.dateTo = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.dateFrom = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.btnValidate = new DevExpress.XtraEditors.SimpleButton();
             this.cmbLocal = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -38,34 +39,39 @@ namespace LsiReportApp
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grdLsiData = new DevExpress.XtraGrid.GridControl();
-            this.dateTo = new DevExpress.XtraEditors.DateTimeOffsetEdit();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbLocal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdLsiData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -81,6 +87,8 @@ namespace LsiReportApp
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.labelControl2);
+            this.layoutControl2.Controls.Add(this.labelControl1);
             this.layoutControl2.Controls.Add(this.dateTo);
             this.layoutControl2.Controls.Add(this.dateFrom);
             this.layoutControl2.Controls.Add(this.btnValidate);
@@ -92,10 +100,25 @@ namespace LsiReportApp
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // dateTo
+            // 
+            this.dateTo.EditValue = null;
+            this.dateTo.Location = new System.Drawing.Point(12, 144);
+            this.dateTo.Name = "dateTo";
+            this.dateTo.Properties.AdvancedModeOptions.Label = "Od:";
+            this.dateTo.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTo.Properties.Appearance.Options.UseFont = true;
+            this.dateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTo.Properties.MaskSettings.Set("mask", "d");
+            this.dateTo.Size = new System.Drawing.Size(152, 30);
+            this.dateTo.StyleController = this.layoutControl2;
+            this.dateTo.TabIndex = 11;
+            // 
             // dateFrom
             // 
             this.dateFrom.EditValue = null;
-            this.dateFrom.Location = new System.Drawing.Point(12, 56);
+            this.dateFrom.Location = new System.Drawing.Point(12, 83);
             this.dateFrom.Name = "dateFrom";
             this.dateFrom.Properties.AdvancedModeOptions.Label = "Od:";
             this.dateFrom.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,10 +132,12 @@ namespace LsiReportApp
             // 
             // btnValidate
             // 
-            this.btnValidate.Location = new System.Drawing.Point(12, 532);
+            this.btnValidate.Appearance.Font = new System.Drawing.Font("Roboto", 14F);
+            this.btnValidate.Appearance.Options.UseFont = true;
+            this.btnValidate.Location = new System.Drawing.Point(12, 524);
             this.btnValidate.Name = "btnValidate";
             this.btnValidate.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnValidate.Size = new System.Drawing.Size(152, 22);
+            this.btnValidate.Size = new System.Drawing.Size(152, 30);
             this.btnValidate.StyleController = this.layoutControl2;
             this.btnValidate.TabIndex = 7;
             this.btnValidate.Text = "Zatwierdź";
@@ -143,7 +168,9 @@ namespace LsiReportApp
             this.layoutControlItem5,
             this.layoutControlItem4,
             this.layoutControlItem3,
-            this.emptySpaceItem3});
+            this.emptySpaceItem3,
+            this.layoutControlItem6,
+            this.layoutControlItem7});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(176, 566);
             this.Root.TextVisible = false;
@@ -160,18 +187,45 @@ namespace LsiReportApp
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 122);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 166);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(156, 398);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(156, 354);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 78);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(32, 105);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(156, 10);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(124, 27);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btnValidate;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 512);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(156, 34);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.dateTo;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 132);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(156, 34);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.dateFrom;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 71);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(156, 34);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
@@ -180,24 +234,6 @@ namespace LsiReportApp
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(156, 10);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.btnValidate;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 520);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(156, 26);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.dateFrom;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 44);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(156, 34);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlGroup1
             // 
@@ -234,29 +270,45 @@ namespace LsiReportApp
             this.grdLsiData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // dateTo
+            // labelControl1
             // 
-            this.dateTo.EditValue = null;
-            this.dateTo.Location = new System.Drawing.Point(12, 100);
-            this.dateTo.Name = "dateTo";
-            this.dateTo.Properties.AdvancedModeOptions.Label = "Od:";
-            this.dateTo.Properties.Appearance.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTo.Properties.Appearance.Options.UseFont = true;
-            this.dateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTo.Properties.MaskSettings.Set("mask", "d");
-            this.dateTo.Size = new System.Drawing.Size(152, 30);
-            this.dateTo.StyleController = this.layoutControl2;
-            this.dateTo.TabIndex = 11;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Roboto", 14F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(12, 56);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(29, 23);
+            this.labelControl1.StyleController = this.layoutControl2;
+            this.labelControl1.TabIndex = 12;
+            this.labelControl1.Text = "Od:";
             // 
-            // layoutControlItem4
+            // layoutControlItem6
             // 
-            this.layoutControlItem4.Control = this.dateTo;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 88);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(156, 34);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
+            this.layoutControlItem6.Control = this.labelControl1;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 44);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(156, 27);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Roboto", 14F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(12, 117);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(28, 23);
+            this.labelControl2.StyleController = this.layoutControl2;
+            this.labelControl2.TabIndex = 13;
+            this.labelControl2.Text = "Do:";
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.labelControl2;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 105);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(32, 27);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
             // 
             // MainForm
             // 
@@ -271,21 +323,23 @@ namespace LsiReportApp
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dateTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbLocal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdLsiData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,6 +364,10 @@ namespace LsiReportApp
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.DateTimeOffsetEdit dateTo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }
 

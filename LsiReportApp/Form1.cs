@@ -1,4 +1,6 @@
-﻿using LsiReportApp.DataAccess;
+﻿using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using LsiReportApp.DataAccess;
 using LsiReportApp.Helpers;
 using LsiReportApp.ViewModels;
 using System;
@@ -23,7 +25,8 @@ namespace LsiReportApp
         {
             InitializeComponent();
             DbContext = new LsiDatabaseEntities();            
-            grdLsiData.DataSource = Common.ToReportViewModels(DbContext.Reports); 
+            grdLsiData.DataSource = Common.ToReportViewModels(DbContext.Reports);
+            cmbLocal.Properties.Items.AddRange(DbContext.Reports.Select(rep => rep.Local).ToList());
         }
 
 
@@ -47,6 +50,7 @@ namespace LsiReportApp
                     to = DateTime.Parse(dateTo.SelectedText);
                 var filteredReports = FilterReports(local, from, to);
                 grdLsiData.DataSource = filteredReports;
+                
             }
             catch (Exception ex)
             {

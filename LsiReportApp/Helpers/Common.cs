@@ -22,11 +22,11 @@ namespace LsiReportApp.Helpers
                 {
                     result = new ReportViewModel
                     {                        
-                        Name = report.Name,
-                        Local = report.Local,
-                        User = report.UserExp,
-                        Date = report.Date,
-                        Time = report.Date.ToString("HH:mm")
+                        Nazwa = report.Name,
+                        Lokal = report.Local,
+                        Uzytkiwnik = report.UserExp,
+                        Data = report.Date,
+                        Godzina = report.Date.ToString("HH:mm")
                     };
                 }
 
